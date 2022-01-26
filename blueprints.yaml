@@ -1,0 +1,41 @@
+name: Kroki Diagrams
+version: 1.0.0
+description: Creates diagrams from textual descriptions using Kroki webservice
+icon: compress
+author:
+  name: Mihai Surdeanu
+  email: contact@mihaisurdeanu.ro
+  url: https://mihaisurdeanu.ro
+homepage: https://github.com/ladotech/grav-plugin-tinypng
+keywords: grav, kroki, diagrams, svg
+bugs: https://github.com/ladotech/grav-plugin-tinypng/issues
+license: MIT
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: Plugin status
+      highlight: 1
+      default: 0
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
+
+    url:
+      type: text
+      label: Kroki URL
+      help: 'Webservice URL for building Kroki image at runtime'
+      placeholder: "https://kroki.io"
+
+    extension:
+      type: select
+      label: Image Extension
+      help: 'Extension to be used to store all local images'
+      options:
+        svg: SVG
+        png: PNG
+        jpeg: JPEG
